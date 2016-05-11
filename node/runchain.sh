@@ -3,9 +3,9 @@
 echo "Sleep for 30 seconds so the master node has initialised"
 sleep 30
 
-echo "Setup /root/.multichain/multichain.conf"
-mkdir -p /root/.multichain/
-cat << EOF > /root/.multichain/multichain.conf
+echo "Setup /root/.multichain/$CHAINNAME/multichain.conf"
+mkdir -p /root/.multichain/$CHAINNAME
+cat << EOF > /root/.multichain/$CHAINNAME/multichain.conf
 rpcuser=$RPC_USER
 rpcpassword=$RPC_PASSWORD
 rpcallowip=$RPC_ALLOW_IP
